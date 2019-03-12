@@ -9,6 +9,7 @@ body {
 ul {
   list-style-type: none;
 }
+
 .meteoriteList {
   background-color: rgba(6, 13, 107, 0.5);
   display: flex;
@@ -21,7 +22,6 @@ ul {
 .meteoriteLandings {
   border: dotted 2px;
 }
-
 .scroll {
   height: 500px;
   overflow: auto;
