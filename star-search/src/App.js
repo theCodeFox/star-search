@@ -20,7 +20,7 @@ class App extends Component {
         <br></br>
         {(this.state.chartType === 'bubble') &&<BubbleChart meteoriteData={meteoriteData} />}
         {(this.state.chartType === 'bar') && <BarChart meteoriteData={meteoriteData} />}
-        <div className="meteoriteLandings">< MeteoriteLandings meteoriteData={meteoriteData} /></div>
+        <div className="scroll meteoriteLandings">< MeteoriteLandings meteoriteData={meteoriteData} /></div>
       </div>
     );
   }

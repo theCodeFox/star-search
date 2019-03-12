@@ -21,10 +21,12 @@ const BarChart = (props) => {
   return (
     <div>
       <h2>Fallen vs Found</h2>
+      <div className='chart'>
       <HorizontalBar data={data} height={50}
 	options={{
-		maintainAspectRatio: false
+		maintainAspectRatio: true
 	}}/>
+      </div>
     </div>
   );
 };

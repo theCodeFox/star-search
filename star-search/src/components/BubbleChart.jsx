@@ -33,7 +33,12 @@ const BubbleChart = (props) => {
 return (
       <div>
         <h2>Meteorite Composition</h2>
-        <Bubble data={data} />
+        <div className='chart'>
+        <Bubble data={data} height={100}
+	options={{
+    maintainAspectRatio: true
+    }} />
+        </div>
       </div>
     );
 };
