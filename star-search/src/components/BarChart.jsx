@@ -20,7 +20,7 @@ const BarChart = (props) => {
   };
   return (
     <div>
-      <h2>Horizontal Bar Example</h2>
+      <h2>Fallen vs Found</h2>
       <HorizontalBar data={data} height={50}
 	options={{
 		maintainAspectRatio: false
