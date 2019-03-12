@@ -16,10 +16,3 @@ export const donutChartLabels = (data) => {
     return acc;
   }, {})
 }
-export const donutChartData = (data) => {
-  return data.reduce((acc, val) => {
-    if (acc[val.recclass]) acc[val.recclass]++;
-    else acc[val.recclass] = 1;
-    return acc;
-  }, {})
-}

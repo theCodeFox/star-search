@@ -22,6 +22,10 @@ ul {
   border: dotted 2px;
 }
 
+.MeteoriteLandings {
+  height: 500px;
+}
+
 .meteorite {
   padding: 1em;
 }

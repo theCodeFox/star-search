@@ -3,20 +3,24 @@ import './App.css';
 import MeteoriteLandings from './components/MeteoriteLandings';
 import axios from 'axios';
 import BarChart from './components/BarChart';
-import DonutChart from './components/DonutChart';
+import BubbleChart from './components/BubbleChart';
+import DropdownBox from './components/Dropdown';
 
 class App extends Component {
   state = {
     meteoriteData: [],
+    chartType: 'bubble'
   }
   render() {
     const { meteoriteData } = this.state;
     return (
       <div className="App">
         <h1>Star Search</h1>
-        <DonutChart meteoriteData={meteoriteData} />
-        < MeteoriteLandings meteoriteData={meteoriteData} />
-        <BarChart meteoriteData={meteoriteData} />
+        <DropdownBox handleSelect={this.handleSelect} />
+        <br></br>
+        {(this.state.chartType === 'bubble') &&<BubbleChart meteoriteData={meteoriteData} />}
+        {(this.state.chartType === 'bar') && <BarChart meteoriteData={meteoriteData} />}
+        <div className="meteoriteLandings">< MeteoriteLandings meteoriteData={meteoriteData} /></div>
       </div>
     );
   }
@@ -27,6 +31,11 @@ class App extends Component {
       .then(({ data }) => {
         this.setState({ meteoriteData: data })
       })
+  }
+
+  handleSelect = (event) => {
+    const selectedChart = event.target.value;
+    this.setState({chartType: selectedChart})
   }
 
 }

@@ -1,10 +1,9 @@
 import React from 'react';
 import {Bubble} from 'react-chartjs-2';
-import { donutChartLabels, donutChartData } from '../utils/utils';
+import { donutChartLabels } from '../utils/utils';
 
-const DonutChart = (props) => {
+const BubbleChart = (props) => {
     const dataSet = donutChartLabels(props.meteoriteData)
-    console.log(dataSet)
     const data = {
         labels: Object.keys(dataSet),
         datasets: [
@@ -12,7 +11,7 @@ const DonutChart = (props) => {
       label: 'Composition: Neurons & Protons, electrons, Number of Meteorites',
       fill: false,
       lineTension: 0.1,
-      backgroundColor: 'rgba(248, 248, 88, 0.4)',
+      backgroundColor: 'rgba(198, 178, 21, 0.4)',
       borderColor: 'white',
       borderCapStyle: 'butt',
       borderDash: [],
@@ -39,4 +38,4 @@ return (
     );
 };
 
-export default DonutChart;
+export default BubbleChart;
