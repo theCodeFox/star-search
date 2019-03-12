@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import MeteoriteLandings from './components/MeteoriteLandings';
 import axios from 'axios';
+import BarChart from './components/BarChart';
+import { barChartData } from './utils/utils';
 
 class App extends Component {
   state = {
@@ -12,7 +14,8 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Star Search</h1>
-        <MeteoriteLandings meteoriteData={meteoriteData} />
+        <BarChart data={barChartData(meteoriteData)} />
+        < MeteoriteLandings meteoriteData={meteoriteData} />
       </div>
     );
   }
