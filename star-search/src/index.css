@@ -12,6 +12,7 @@ ul {
   list-style-type: none;
 }
 #meteoriteList {
+  background-color: rgba(1, 1, 68, 0.5);
   display: flex;
   flex-wrap: wrap;
   align-content: center;
