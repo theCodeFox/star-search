@@ -1,0 +1,11 @@
+.leaflet-container {
+	height: 30em;
+	width: 42.5em;
+	margin: 0px;
+	resize: both;
+	overflow: hidden;
+	grid-column: 2 / 3;
+	position: relative;
+	justify-content: center;
+	border: solid 2px;
+}

@@ -1,20 +1,24 @@
-import React from 'react'
-import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
+import React from "react";
+import "../styles/leaflet.css";
+import { mapLocations } from '../utils/utils'
+import { Map, TileLayer, Marker, Popup } from "react-leaflet";
 
-const position = [51.505, -0.09]
-const MeteoriteMap = () => {
-
-  return <div id="test">(
-  <Map center={position} zoom={13}>
-      <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
-      />
-      <Marker position={position}>
-        <Popup>A pretty CSS3 popup.<br />Easily customizable.</Popup>
-      </Marker>
-    </Map>
-    )</div>
+// const position = [51.505, -0.09]
+const MeteoriteMap = (props) => {
+  const positionsArray = mapLocations(props.meteoriteData);
+  return <div>
+  <Map center={[40, 0]} zoom={1}>
+  <TileLayer
+    attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
+  />
+  {positionsArray.map(position => {
+    return <Marker key={position[3]} position={position.slice(0, 2)}>
+      <Popup>{position[2]}<br />{position[4]}</Popup>
+    </Marker>
+    })}
+  </Map>
+  </div>
 }
 
 

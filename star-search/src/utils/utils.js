@@ -16,3 +16,13 @@ export const donutChartLabels = (data) => {
     return acc;
   }, {})
 }
+
+export const mapLocations = (data) => {
+  return data.reduce((acc, val) => {
+    if (val.reclat && val.reclong) {
+      acc.push([+val.reclat, +val.reclong, val.name, val.id, val.fall])
+    }
+
+    return acc;
+  }, [])
+}

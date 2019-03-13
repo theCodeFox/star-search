@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './styles/App.css';
 import MeteoriteLandings from './components/MeteoriteLandings';
 import axios from 'axios';
 import BarChart from './components/BarChart';
@@ -10,7 +10,7 @@ import MeteoriteMap from './components/Map';
 class App extends Component {
   state = {
     meteoriteData: [],
-    chartType: 'bubble'
+    chartType: 'map'
   }
   render() {
     const { meteoriteData } = this.state;
@@ -21,7 +21,7 @@ class App extends Component {
         <br></br>
         {(this.state.chartType === 'bubble') && <BubbleChart meteoriteData={meteoriteData} />}
         {(this.state.chartType === 'bar') && <BarChart meteoriteData={meteoriteData} />}
-        {(this.state.chartType === 'map' && <div id="mapid"><MeteoriteMap /></div>)}
+        {(this.state.chartType === 'map' && <div className='leaflet-container'><MeteoriteMap meteoriteData={meteoriteData}/></div>)}
         <div className="scroll meteoriteLandings">< MeteoriteLandings meteoriteData={meteoriteData} /></div>
       </div>
     );
@@ -36,7 +36,6 @@ class App extends Component {
   }
 
   handleSelect = (event) => {
-    console.log(event.target.value)
     const selectedChart = event.target.value;
     this.setState({ chartType: selectedChart })
   }
