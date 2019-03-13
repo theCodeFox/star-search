@@ -5,6 +5,7 @@ import axios from 'axios';
 import BarChart from './components/BarChart';
 import BubbleChart from './components/BubbleChart';
 import DropdownBox from './components/Dropdown';
+import MeteoriteMap from './components/Map';
 
 class App extends Component {
   state = {
@@ -18,8 +19,9 @@ class App extends Component {
         <h1>Star Search</h1>
         <DropdownBox handleSelect={this.handleSelect} />
         <br></br>
-        {(this.state.chartType === 'bubble') &&<BubbleChart meteoriteData={meteoriteData} />}
+        {(this.state.chartType === 'bubble') && <BubbleChart meteoriteData={meteoriteData} />}
         {(this.state.chartType === 'bar') && <BarChart meteoriteData={meteoriteData} />}
+        {(this.state.chartType === 'map' && <div id="mapid"><MeteoriteMap /></div>)}
         <div className="scroll meteoriteLandings">< MeteoriteLandings meteoriteData={meteoriteData} /></div>
       </div>
     );
@@ -34,8 +36,9 @@ class App extends Component {
   }
 
   handleSelect = (event) => {
+    console.log(event.target.value)
     const selectedChart = event.target.value;
-    this.setState({chartType: selectedChart})
+    this.setState({ chartType: selectedChart })
   }
 
 }
