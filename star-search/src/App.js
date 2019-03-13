@@ -10,7 +10,7 @@ import MeteoriteMap from './components/Map';
 class App extends Component {
   state = {
     meteoriteData: [],
-    chartType: 'map'
+    chartType: 'bubble'
   }
   render() {
     const { meteoriteData } = this.state;
