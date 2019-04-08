@@ -1,38 +1,154 @@
-## REACTOGRAPHY
-Today's sprint leaves a lot of room for you to be creative.
+# **Star Search**
+Allows user to search for fallen stars using the Nas API. This is a student piece designed to learn react, how to integrate charts and basic styling.
 
-#### THE TASK
-We'll be looking at using data from a third party API. Your task is to create a React-based interface to present this data in an interactive and engaging way. What you display and how you display it is entirely up to you, but your app must allow users to interact with your data visualisation in some way.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-For example if you were displaying a heatmap for earthquake data, the user might choose to show only data for a certain location, and then they may choose to show only events between January and May 2018. The interface would alter the data visualisation to match what the user had chosen.
+***
 
-The first step is to decide on which API you will use for this project. We recommend using one from the following list as they are fairly easy to get started with. Stray at your own risk!
+## **Getting Started**
+1. Fork from **`GitHub`**: https://github.com/theCodeFox/star-search.git
+2. `Clone into the directory that you will be working from`
+3. Install all dependancies and dev-dependancies *(see Installing below)*
+4. **`npm start`** - runs the app in the development mode *(Open [http://localhost:3000](http://localhost:3000) to view it in the browser, it will reload if you make edits)*
+5. Play around and most importantly... **_have fun!_**
 
-#### CHOOSE YOUR API
-Pick one of the following APIs as your main source of data:
-- [UK Police Data](https://data.police.uk/docs/) - Policing & crime data in the UK
-- [USGS Earthquake Hazards Program](https://earthquake.usgs.gov/fdsnws/event/1/) - Earthquakes and stuff
-- [BikeWise](https://www.bikewise.org/documentation/api_v2) - Bike crashes, hazards and thefts
-- [Open Weather Map](https://openweathermap.org/api) - Current and forecast weather accross the globe
-- [TicketMaster](https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/) - Events
-- [Google books](https://developers.google.com/books/docs/overview) - Information on Books
-- [NASA](https://data.nasa.gov/Space-Science/Meteorite-Landings/gh4g-9sfh) - Meteorite landings
+***NOTE**: though I have left `npm eject` in, **DO NOT USE** as is a one-way operation and will remove the single build dependency from this project*
 
-Once you have chosen your API you should spend a little time planning.
-* [] Draw out your interface
-* [] Choose which pieces of the interface can be separated into components
-* [] Draw out the tree structure for your components
-* [] Decide which pieces of state each component will need and get a rough idea of where this state will sit on your tree
-* [] Design your state so you keep it to a minimum. Don't repeat yourself!
-* [] Ensure state is high enough it can be shared by necessary components, but as low as possible to avoid passing it unnecessarily.
+### **Installing**
 
-#### Visualisation
-We encourage you to make good use of data visualisation packages such as [react-chartjs-2](https://github.com/jerairrest/react-chartjs-2) or [react-google-charts](https://www.npmjs.com/package/react-google-charts)
-These are fairly customisable and save you from re-inventing the wheel when it comes to creating charts.
+Once you have cloned the repo then cd into the directory. 
 
-Some of the data sets from the APIs above come with coordinates (lat, lon) so it would be cool to use them to visualise your data on a map. [React-Leaflet](https://react-leaflet.js.org/) would be a good place to start.
+From here:
 
-Don't feel confined to these suggestions. If you come accross something else you'd like to try feel free =]
+**Install dependancies**
 
-Note:
-If you cd into the root directory of this repo you can run `create-react-app .` to place your new project in here.
+```
+npm install
+```
+
+This should install everything you need from the package JSON. If in doubt just copy the example package.json below into your one and then run the code above in your terminal.
+
+**Add browserslist to Package JSON**
+
+```JSON
+  {
+      "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+  }
+```
+
+*Your Package JSON should look something like this:*
+
+```JSON
+{
+  "name": "star-search",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "chart.js": "^2.7.3",
+    "leaflet": "^1.4.0",
+    "react": "^16.8.4",
+    "react-chartjs-2": "^2.7.4",
+    "react-dom": "^16.8.4",
+    "react-leaflet": "^2.2.1",
+    "react-scripts": "2.1.8"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
+```
+
+**Don't forget a gitignore file!**
+
+```ruby
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+/src/App.test.js
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+```
+
+## **Contributing**
+
+This is a course project for study purposes. Rights go to Northcoders who provided the course and assisted with studying.
+
+`As a solo sprint there is to be no contributing.`
+***
+## **Versioning**
+* Visual Studio Code - 15.0
+* npm - 6.8.0
+
+```json
+{
+  "name": "codefox-nc-knews",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@reach/router": "^1.2.1",
+    "axios": "^0.18.0",
+    "local-storage": "^1.4.2",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-image": "^2.0.0",
+    "react-scripts": "2.1.8"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
+```
+***
+## **Authors**
+
+* **Kay Fox & Vik Cumacenko** - *Initial work* - [theCodeFox](https://github.com/theCodeFox) & [rosiline](https://github.com/rosiline)
+***
+## **License**
+
+This project is licensed under the **ISC** License
+***
+## **Acknowledgments**
+
+* **NorthCoders!** (https://northcoders.com) - A massive thank you for all assistance, teaching, lectures and above all patience.
