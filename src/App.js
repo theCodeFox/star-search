@@ -18,7 +18,6 @@ class App extends Component {
       <div className="App">
         <h1>Star Search</h1>
         <DropdownBox handleSelect={this.handleSelect} />
-        <br></br>
         {(this.state.chartType === 'bubble') && <BubbleChart meteoriteData={meteoriteData} />}
         {(this.state.chartType === 'bar') && <BarChart meteoriteData={meteoriteData} />}
         {(this.state.chartType === 'map' && <div className='leaflet-container'><MeteoriteMap meteoriteData={meteoriteData}/></div>)}

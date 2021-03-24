@@ -7,7 +7,7 @@ import { Map, TileLayer, Marker, Popup } from "react-leaflet";
 const MeteoriteMap = (props) => {
   const positionsArray = mapLocations(props.meteoriteData);
   return <div>
-  <Map center={[40, 0]} zoom={1}>
+  <Map className="map" center={[40, 0]} zoom={1}>
   <TileLayer
     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
